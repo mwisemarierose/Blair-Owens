@@ -1,0 +1,104 @@
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+#listing-card {
+    display: flex;
+    background-color: white;
+    min-height: 170px;
+    width: 100%;
+}
+
+#listing-card-image {
+    height: 220px;
+    width: 220px;
+    position: relative;
+}
+
+#listing-card-image .view-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #144273;
+    color: #fff;
+    padding: 10px 20px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+#listing-card-image:hover .view-button {
+    opacity: 1;
+}
+
+#listing-card-image img {
+    height: 100%;
+}
+
+#listing-card-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 20px 20px 20px 0px;
+    height: auto;
+}
+
+#listing-card-title {
+    color: grey;
+    font-size: 16px;
+    font-weight: 400;
+    width: calc(100% - 20px);
+    margin-left: 20px;
+}
+
+#listing-card-address {
+    color: #144273;
+    font-size: 12px;
+    word-spacing: 2px;
+    margin-top: 10px;
+    width: calc(100% - 20px);
+    margin-left: 20px;
+}
+
+#listing-card-rating {
+    color: #CCCCCC;
+    font-size: 12px;
+    margin-top: 8px;
+    width: calc(100% - 20px);
+    padding-left: 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+    padding-bottom: 8px;
+}
+
+#listing-card-rating .verified {
+    color: #FACC39;
+}
+
+#listing-card-viewership {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#listing-card-viewership>* {
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+#listing-card-viewership .edit {
+    fill: #3270FC;
+}
+
+#listing-card-viewership .delete {
+    fill: #97162b;
+}
+.image-link {
+    display: inline-block;
+  }
