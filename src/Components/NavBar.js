@@ -14,7 +14,7 @@ export default function NavBar() {
 
       <ul className="nav-links" style={{ fontSize: "13px" }}>
         <li>
-          <NavLink to={"/"}> Our properties</NavLink>
+          <NavLink to={"/properties"}> Our properties</NavLink>
         </li>
         <li>
           <NavLink to={"/mls"}> MLS Search</NavLink>
@@ -42,8 +42,8 @@ export default function NavBar() {
         {" "}
           <HiOutlineUserCircle
             style={{
-              fontSize: "2rem",
-              fontWeight: "lighter",
+              fontSize: "1.5rem",
+              fontWeight: "5px",
             }}
             onClick = {() =>{
                 document.getElementById('background').style.display ="flex"

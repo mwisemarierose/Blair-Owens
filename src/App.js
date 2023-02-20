@@ -2,6 +2,7 @@ import "./App.css";
 import Properties from "./pages/properties";
 import Mls from "./pages/Mls";
 import News from "./pages/news";
+import { Homepage } from "./pages/Home";
 import { Contact } from "./pages/contact";
 import SingleNews from "./pages/blogDetail";
 import LoginForm from "./pages/login";
@@ -22,12 +23,9 @@ function App() {
         <Route path="/dashboard/listing" element={<Listing />} />
         <Route path="/dashboard/edit" element={<Edit />} />
       
-
-
-
       </Route>
-
-      <Route path="/" element={<Properties />} />
+      <Route path="/" element={<Homepage/>} />
+      <Route path="/properties" element={<Properties />} />
       <Route path="/news" element={<News />} />
       <Route path="/mls" element={<Mls />} />
       <Route path="/readmore" element={<SingleNews />} />

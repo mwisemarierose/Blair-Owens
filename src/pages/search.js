@@ -1,4 +1,5 @@
 import Navbar from "../Components/Navbar";
+import { ChatSection } from "../Components/ChatBox/chat";
 
 export default function Search() {
     return (
@@ -8,6 +9,7 @@ export default function Search() {
             
        
             </div>
+            <ChatSection  />
     </div>
     );
   }

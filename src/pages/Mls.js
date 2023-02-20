@@ -3,6 +3,7 @@ import  PropertyCard  from '../Components/ListingCard'
 import { Filter } from '../Components/Filter'
 import NavBar from '../Components/NavBar';
 import LoginForm from './login';
+import { Footer } from '../Components/Footer/Footer';
 
 
 function Mls() {
@@ -22,9 +23,12 @@ function Mls() {
     },
   ];
   return (<div>
+    
+    
     <LoginForm />
     <NavBar />
     <Filter />
+    
     <div className='mls-cOntainer'>
       <div className='map-container'>map</div>
       <div className='w-full'>
@@ -40,7 +44,9 @@ function Mls() {
         </div>
       </div>
     </div>
+    <Footer />
   </div>
+
 
   )
 }

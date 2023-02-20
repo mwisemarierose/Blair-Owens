@@ -8,7 +8,6 @@ export const NewsCard = ({ urlimg,title, description }) => {
       </div>
       <div className="newsCardHeader">
         <div className="avatar">
-          {/* <img src="https://elementor1.contempothemes.com/wp-content/uploads/2020/12/riley-profile.jpg"></img> */}
         </div>
 
         <div>
