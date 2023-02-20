@@ -32,7 +32,7 @@ export const Card =({image,title,district ,id}) =>{
   return (
     <div className="cards col-md-6">
     <div id="listing-card">
-    <a href="/dashboard/view" class="image-link">  
+    <a href="/view" class="image-link">  
     <div id="listing-card-image" class="image-link">
       <img
         src={image}

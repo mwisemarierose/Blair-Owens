@@ -21,7 +21,7 @@ function App() {
         <Route path="/dashboard/addNew" element={<AddNew />} />
         <Route path="/dashboard/listing" element={<Listing />} />
         <Route path="/dashboard/edit" element={<Edit />} />
-      <Route path="/dashboard/view" element={<ViewPage />} />
+      
 
 
 
@@ -33,6 +33,7 @@ function App() {
       <Route path="/readmore" element={<SingleNews />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/login" element={<LoginForm />} />
+      <Route path="view" element={<ViewPage />} />
     </Routes>
   );
 }
