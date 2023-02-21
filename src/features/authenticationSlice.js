@@ -2,6 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const initialState = {
+ 
+  loading: true,
   userCreated:false,
   isLoggedIn: false,
   token: "",
@@ -36,8 +38,9 @@ export const authSlice = createSlice({
 });
 
 export const loginUser = (data) => (dispatch) => {
-
+    
   axios({
+    
     method: "POST",
     url: "https://klabapi.onrender.com/api/auth/login",
     data: data,
@@ -52,11 +55,11 @@ export const loginUser = (data) => (dispatch) => {
       dispatch(token(res.data.token));
       localStorage.setItem("token", res.data.token);
       dispatch(login(res.data.data));
-      // localStorage.setItem("admin",)
     })
     .catch((err) => {
       dispatch(loginError(err.response.data.message));
     });
+   
 }
 export const createUser = (data) =>(dispatch) => {
 

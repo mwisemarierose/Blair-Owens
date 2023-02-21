@@ -5,10 +5,12 @@ import { Footer } from '../Components/Footer/Footer';
 import {AiOutlineSearch} from "react-icons/ai";
 import { Homecard } from '../Components/Home/HomeCard';
 import './home.css'
+import LoginForm from './login'
 
 export const Homepage = () => {
     return (
         <div id='homepage'>
+            <LoginForm />
             <ChatSection/>
             <NavBar/>
             <div className="home-intro">

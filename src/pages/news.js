@@ -17,7 +17,7 @@ export default function News() {
   const fetchData = () => {
     axios({
       method: "GET",
-      url: "https://newsapi.org/v2/everything?q=tesla&from=2023-01-20&sortBy=publishedAt&apiKey=7e7a2fe4361a4005842ca5d1cac10bdd",
+      url: "https://newsapi.org/v2/everything?q=tesla&from=2023-01-21&sortBy=publishedAt&apiKey=7e7a2fe4361a4005842ca5d1cac10bdd",
     })
       .then((response) => {
         setBlogs(response.data.articles);

@@ -68,6 +68,10 @@
   border-radius: 3px;
   cursor: pointer;
 }
+.disabled {
+  background-color: #477be4;
+  cursor: not-allowed;
+}
 #login-with-fb{
   height: 40px;
   width: 100%;

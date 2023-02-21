@@ -9,10 +9,11 @@ import { AiOutlineGoogle } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
 import "./LoginForm.css";
 
+
 export default function LoginForm() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { isLoggedIn, error, userCreated } = useSelector(
+  const { isLoggedIn, error, userCreated  } = useSelector(
     (state) => state.auth
   );
   const [userEmail, setUserEmail] = useState("");
@@ -20,6 +21,7 @@ export default function LoginForm() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading ,setisLoading] = useState(false)
 
   useEffect(() => {
     if (isLoggedIn) {
@@ -27,18 +29,17 @@ export default function LoginForm() {
     }
   }, [isLoggedIn]);
 
-  useEffect(
-    (res) => {
-      if (userCreated) {
-        //  document.getElementById('login-popup')
-        // navigate("/news");
-      }
-    },
-    [userCreated]
-  );
+  useEffect(() => {
+    if (error) {
+      setisLoading(false)
+    }
+  }, [error]);
 
+  
   const handleLogin = (e) => {
     e.preventDefault();
+   setisLoading(true)
+    
     dispatch(
       loginUser({
         email: userEmail,
@@ -56,7 +57,7 @@ export default function LoginForm() {
       })
     );
   };
-
+  
   return (
     <div id="background">
       <div id="login-popup">
@@ -106,10 +107,12 @@ export default function LoginForm() {
               setUserPassword(event.target.value);
             }}
           />
-          <button
+          
+        <button
             onClick={handleLogin}
-            className="popup-buttons"
+            className={`popup-buttons ${isLoading && 'disabled'}`}
             id="loginbutton"
+            disabled={isLoading}
           >
             LOGIN
           </button>
@@ -237,4 +240,5 @@ export default function LoginForm() {
       </div>
     </div>
   );
+        
 }
